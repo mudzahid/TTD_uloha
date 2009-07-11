@@ -32,4 +32,33 @@ class ConverterUnitTest < Test::Unit::TestCase
     assert_equal "nineteen", @converter.convert_number_to_words(19)
   end
   
+  def test_decimals
+    assert_equal "ten", @converter.convert_number_to_words(10)
+    assert_equal "twenty", @converter.convert_number_to_words(20)
+    assert_equal "thirty", @converter.convert_number_to_words(30)
+    assert_equal "fourty", @converter.convert_number_to_words(40)
+    assert_equal "fifty", @converter.convert_number_to_words(50)
+    assert_equal "sixty", @converter.convert_number_to_words(60)
+    assert_equal "seventy", @converter.convert_number_to_words(70)
+    assert_equal "eighty", @converter.convert_number_to_words(80)
+    assert_equal "ninety", @converter.convert_number_to_words(90)
+    
+  end
+  
+  def test_cents
+    assert_equal "one hundred", @converter.convert_number_to_words(100)
+    assert_equal "two hundred", @converter.convert_number_to_words(200)
+    assert_equal "three hundred", @converter.convert_number_to_words(300)
+    assert_equal "four hundred", @converter.convert_number_to_words(400)
+    assert_equal "five hundred", @converter.convert_number_to_words(500)
+    assert_equal "six hundred", @converter.convert_number_to_words(600)
+    assert_equal "seven hundred", @converter.convert_number_to_words(700)
+    assert_equal "eight hundred", @converter.convert_number_to_words(800)
+    assert_equal "nine hundred", @converter.convert_number_to_words(900)
+    
+  end
+  
+  def test_thousands
+  end
+  
 end
