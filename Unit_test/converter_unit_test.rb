@@ -59,6 +59,20 @@ class ConverterUnitTest < Test::Unit::TestCase
   end
   
   def test_thousands
+    assert_equal "one thousand", @converter.convert_number_to_words(1000)
+    assert_equal "two thousand", @converter.convert_number_to_words(2000)
+    assert_equal "three thousand", @converter.convert_number_to_words(3000)
+    assert_equal "four thousand", @converter.convert_number_to_words(4000)
+    assert_equal "five thousand", @converter.convert_number_to_words(5000)
+    assert_equal "six thousand", @converter.convert_number_to_words(6000)
+    assert_equal "seven thousand", @converter.convert_number_to_words(7000)
+    assert_equal "eight thousand", @converter.convert_number_to_words(8000)
+    assert_equal "nine thousand", @converter.convert_number_to_words(9000)
+  end
+  
+  def test_random_number
+    assert_equal "one thousand two hundred thirty four", @converter.convert_number_to_words(1234)
+    assert_equal "nine thousand eight hundred sixty five", @converter.convert_number_to_words(9865)
   end
   
 end
