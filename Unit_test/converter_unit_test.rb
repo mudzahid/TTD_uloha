@@ -78,13 +78,17 @@ class ConverterUnitTest < Test::Unit::TestCase
     assert_equal "one thousand two hundred", @converter.convert_number_to_words(1200)
     assert_equal "one thousand two hundred thirty", @converter.convert_number_to_words(1230)
     assert_equal "one thousand two hundred eleven", @converter.convert_number_to_words(1211)
-    
+    assert_equal "two hundred eleven", @converter.convert_number_to_words(211)
+    assert_equal "twenty one thousand one hundred twenty three", @converter.convert_number_to_words(21123)
+    assert_equal "eleven thousand three hundred twelve", @converter.convert_number_to_words(11312)
+    assert_equal "one hundred thousand", @converter.convert_number_to_words(100000)
+    assert_equal "one hundred twenty three thousand four hundred fifty six", @converter.convert_number_to_words(123456)
   end
   
   def test_bad_input
     assert_equal "This is not a number! Please enter an integer from 0 to 9999!", @converter.convert_number_to_words("string")
     assert_equal "This is not an integer! Please enter an integer from 0 to 9999!", @converter.convert_number_to_words(7.56)
-    assert_equal "The integer is too large please enter an integer from 0 to 9999!", @converter.convert_number_to_words(56666666)
+    assert_equal "The integer is too large please enter an integer from 0 to 9999!", @converter.convert_number_to_words(566666663333)
   end
   
 end
