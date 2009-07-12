@@ -74,9 +74,11 @@ class ConverterUnitTest < Test::Unit::TestCase
     assert_equal "one thousand two hundred thirty four", @converter.convert_number_to_words(1234)
     assert_equal "nine thousand eight hundred sixty five", @converter.convert_number_to_words(9865)
     assert_equal "one hundred twenty three", @converter.convert_number_to_words(123)
-    assert_equal "three hundred forty five", @converter.convert_number_to_words(345)
+    assert_equal "three hundred fourty five", @converter.convert_number_to_words(345)
     assert_equal "one thousand two hundred", @converter.convert_number_to_words(1200)
     assert_equal "one thousand two hundred thirty", @converter.convert_number_to_words(1230)
+    assert_equal "one thousand two hundred eleven", @converter.convert_number_to_words(1211)
+    
   end
   
   def test_bad_input
